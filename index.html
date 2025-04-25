@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تحميل فيسبوك الذهبي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 500;
+      line-height: 1.8;
+      color: #222;
+      background: #f9f9f9;
+    }
+    .header { background: #ffcc00; text-align: center; padding: 20px; }
+    h1 { font-size: 22px; font-weight: 800; margin-bottom: 5px; }
+    .content {
+      max-width: 600px; margin: 30px auto; background: #fff; padding: 20px;
+      border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .lang { display: none; }
+    .app-logo { width: 120px; height: 120px; margin-bottom: 20px; }
+    .download-btn {
+      display: block; margin: 20px auto;
+      background: linear-gradient(to left, #28a745, #218838);
+      color: white; padding: 14px 28px; font-size: 17px; font-weight: bold;
+      text-align: center; border: none; border-radius: 50px;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease; width: fit-content; min-width: 180px;
+    }
+    .download-btn:hover {
+      background: linear-gradient(to left, #218838, #1e7e34);
+    }
+    .countdown-box {
+      background: linear-gradient(135deg, #ffd700, #ffcc00);
+      padding: 15px; margin-top: 20px; border-radius: 12px;
+      font-size: 20px; font-weight: 700; text-align: center;
+      color: #222; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none;
+    }
+    .footer { text-align: center; padding: 20px; font-size: 14px; background: #f1f1f1; margin-top: 40px; }
+  </style>
+  <script>
+    let lang = 'ar';
+    function setLanguage(selectedLang) {
+      lang = selectedLang;
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+      });
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const userLang = navigator.language.startsWith("ar") ? "ar" : "en";
+      setLanguage(userLang);
+    });
+
+    function startCountdown() {
+      var counter = 10;
+      var countdownBox = document.getElementById("countdownBox");
+      var startBtn = document.getElementById("startBtn");
+      var downloadBtn = document.getElementById("downloadNowBtn");
+
+      startBtn.style.display = "none";
+      countdownBox.style.display = "block";
+      countdownBox.innerText = lang === "ar"
+        ? "⏳ يرجى الانتظار " + counter + " ثانية..."
+        : "⏳ Please wait " + counter + " seconds...";
+
+      var interval = setInterval(function () {
+        counter--;
+        countdownBox.innerText = lang === "ar"
+          ? "⏳ يرجى الانتظار " + counter + " ثانية..."
+          : "⏳ Please wait " + counter + " seconds...";
+
+        if (counter === 0) {
+          clearInterval(interval);
+          countdownBox.style.display = "none";
+          downloadBtn.style.display = "inline-block";
+        }
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+
+  <div style="text-align:center; margin-top:20px;">
+    <button onclick="setLanguage('ar')">🇸🇦 عربي</button>
+    <button onclick="setLanguage('en')">🇺🇸 English</button>
+  </div>
+
+  <header class="header">
+    <h1 data-lang="ar" class="lang">تحميل فيسبوك الذهبي</h1>
+    <h1 data-lang="en" class="lang">Download Facebook Gold</h1>
+    <p data-lang="ar" class="lang">نسخة محدثة وآمنة | برابط مباشر</p>
+    <p data-lang="en" class="lang">Latest version | Safe & Direct Download</p>
+  </header>
+
+  <main class="content">
+    <div class="app-info" style="text-align: center;">
+      <img src="logo.png" alt="شعار التطبيق" class="app-logo" />
+      <p data-lang="ar" class="lang">فيسبوك جولد هو نسخة معدلة من تطبيق فيسبوك الرسمي، تم تطويره لتقديم ميزات إضافية مثل تحميل الصور والفيديوهات وإخفاء الظهور.</p>
+      <p data-lang="en" class="lang">Facebook Gold is a modified version of the official app with added features like downloading videos and hiding your activity.</p>
+
+      <!-- زر بدء التحميل موحد -->
+      <button onclick="startCountdown()" id="startBtn" class="download-btn">⬇️ Start Download</button>
+
+      <!-- العداد بلغتين -->
+      <div id="countdownBox" class="countdown-box"></div>
+
+      <!-- زر التحميل الحقيقي (دائمًا إنجليزي) -->
+      <a href="download.php" id="downloadNowBtn" class="download-btn" style="display: none;">Download Now ⬇️</a>
+    </div>
+
+    <div class="adsense-box" style="margin-top: 30px; text-align: center; min-height: 100px;">
+      <!-- Google AdSense code here -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 جميع الحقوق محفوظة</p>
+    <nav class="footer-links">
+      <a href="/privacy-policy.html">سياسة الخصوصية</a> |
+      <a href="/terms.html">شروط الاستخدام</a> |
+      <a href="/about.html">من نحن</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
