@@ -2,7 +2,7 @@
 // حماية إضافية ممكنة لاحقاً (مثل التحقق من الجلسة أو IP)
 
 // الرابط الحقيقي للتحميل
-$downloadUrl = 'https://dlll.apkm.app/insta/9.80F/InstaGold_v9.80F.apk';
+$downloadUrl = 'https://dlll.apkm.app/instagold/9.90/InstaGold_v9.90.apk';
 
 // إعادة توجيه المستخدم إلى الرابط
 header("Location: $downloadUrl");
