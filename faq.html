@@ -2,27 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
-    <title>الشروط والأحكام - انستقرام الذهبي</title>
+    <title>الأسئلة الشائعة - انستقرام الذهبي</title>
     <link rel="icon" href="https://instagold.download/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="robots" content="index,follow"/>
-    <meta name="description" content="الشروط والأحكام التي تحكم استخدام تطبيق انستقرام الذهبي والموقع. يرجى قراءتها بعناية."/>
-    <meta name="keywords" content="Instagram Gold, Instagram Plus, شروط وأحكام, terms and conditions, مسؤولية المستخدم"/>
+    <meta name="description" content="الأسئلة الشائعة حول انستقرام الذهبي. تعرف على كيفية التنزيل والاستخدام والميزات وكيفية حل المشكلات الشائعة."/>
+    <meta name="keywords" content="Instagram Gold, Instagram Plus, أسئلة شائعة, FAQ, انستقرام الذهبي"/>
 
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="GoldFire"/>
     <meta property="og:locale" content="ar_AR"/>
-    <meta property="og:url" content="https://instagold.ogwhats.me/terms.html"/>
-    <meta property="og:title" content="الشروط والأحكام - انستقرام الذهبي"/>
-    <meta property="og:description" content="قراءة وفهم الشروط والأحكام التي تحكم استخدامك لتطبيقنا وموقعنا."/>
+    <meta property="og:url" content="https://instagold.ogwhats.me/faq.html"/>
+    <meta property="og:title" content="الأسئلة الشائعة - انستقرام الذهبي"/>
+    <meta property="og:description" content="أجوبة على أكثر الأسئلة شيوعاً حول تطبيق انستقرام الذهبي."/>
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@GoldFire"/>
-    <meta name="twitter:title" content="الشروط والأحكام - انستقرام الذهبي"/>
-    <meta property="twitter:description" content="قراءة وفهم الشروط والأحكام التي تحكم استخدامك لتطبيقنا وموقعنا."/>
+    <meta name="twitter:title" content="الأسئلة الشائعة - انستقرام الذهبي"/>
+    <meta property="twitter:description" content="أجوبة على أكثر الأسئلة شيوعاً حول تطبيق انستقرام الذهبي."/>
 
-    <meta itemprop="name" content="الشروط والأحكام - انستقرام الذهبي"/>
-    <meta itemprop="description" content="قراءة وفهم الشروط والأحكام التي تحكم استخدامك لتطبيقنا وموقعنا."/>
+    <meta itemprop="name" content="الأسئلة الشائعة - انستقرام الذهبي"/>
+    <meta itemprop="description" content="أجوبة على أكثر الأسئلة شيوعاً حول تطبيق انستقرام الذهبي."/>
 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -147,16 +147,16 @@
         }
         
         .main-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto 50px;
             padding: 0 15px;
         }
 
-        .terms-section {
+        .faq-section {
             background: white;
             border-radius: 18px;
             box-shadow: var(--shadow);
-            padding: 30px;
+            padding: 25px;
         }
 
         .section-title {
@@ -164,7 +164,7 @@
             font-weight: 800;
             color: var(--text-dark);
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             position: relative;
             padding-bottom: 12px;
         }
@@ -187,51 +187,74 @@
             transform: translateX(50%);
         }
 
-        .terms-content h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--plus-dark);
-            margin-top: 25px;
-            margin-bottom: 10px;
+        .faq-item {
+            margin-bottom: 20px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+            padding-bottom: 20px;
         }
 
-        .terms-content p {
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--plus-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            background: #f8f8f8;
+            padding: 15px 20px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: #f7e6f2;
+        }
+
+        .faq-question i {
+            color: var(--plus-primary);
+            font-size: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
             font-size: 16px;
             color: #555;
+            padding: 15px 20px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .faq-answer p {
             margin-bottom: 15px;
         }
 
-        .terms-content ol, .terms-content ul {
-            margin: 10px 0 20px 35px;
-            list-style-type: decimal;
-            font-size: 16px;
-            color: #555;
+        .faq-answer p:last-child {
+            margin-bottom: 0;
         }
         
-        [dir="rtl"] .terms-content ol, [dir="rtl"] .terms-content ul {
-            list-style-type: arabic-indic;
-        }
-
-        [dir="ltr"] .terms-content ol, [dir="ltr"] .terms-content ul {
-             margin-left: 35px;
-             margin-right: 0;
-        }
-        
-        .terms-content ul {
+        .faq-answer ul {
+            margin-right: 25px;
             list-style-type: disc;
         }
-
-        .terms-content ol li, .terms-content ul li {
+        
+        .faq-answer ul li {
             margin-bottom: 8px;
-        }
-
-        .update-date {
-            text-align: center;
-            font-size: 14px;
-            color: #888;
-            margin-top: 30px;
         }
         
         .footer {
@@ -335,13 +358,10 @@
             .section-title {
                 font-size: 22px;
             }
-            .terms-content h3 {
-                font-size: 18px;
+            .faq-question {
+                font-size: 16px;
             }
-            .terms-content p {
-                font-size: 14px;
-            }
-            .terms-content ol, .terms-content ul {
+            .faq-answer {
                 font-size: 14px;
             }
             .footer-logo {
@@ -369,83 +389,134 @@
     
     <header class="header">
         <div class="header-content">
-            <h1 data-lang="ar">الشروط والأحكام</h1>
-            <h1 data-lang="en">Terms & Conditions</h1>
-            <p class="subtitle" data-lang="ar">الرجاء قراءة هذه الشروط بعناية قبل استخدام موقعنا وتطبيقنا</p>
-            <p class="subtitle" data-lang="en">Please read these terms carefully before using our website and app</p>
+            <h1 data-lang="ar">الأسئلة الشائعة</h1>
+            <h1 data-lang="en">Frequently Asked Questions (FAQ)</h1>
+            <p class="subtitle" data-lang="ar">أجوبة على أكثر الأسئلة شيوعاً حول انستقرام الذهبي</p>
+            <p class="subtitle" data-lang="en">Answers to the most common questions about Instagram Gold</p>
         </div>
     </header>
     
     <div class="main-content">
-        <div class="terms-section">
-            <h2 class="section-title" data-lang="ar">مقدمة</h2>
-            <h2 class="section-title" data-lang="en">Introduction</h2>
+        <div class="faq-section">
+            <h2 class="section-title" data-lang="ar">حول التطبيق</h2>
+            <h2 class="section-title" data-lang="en">About the App</h2>
             
-            <div class="terms-content" data-lang="ar">
-                <p>مرحباً بك في موقع وتطبيق انستقرام الذهبي. باستخدامك لهذا الموقع أو تطبيقنا، فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام الموقع أو التطبيق.</p>
+            <div class="faq-list">
                 
-                <h3>1. قبول الشروط</h3>
-                <p>تُعتبر هذه الشروط عقدًا ملزمًا بينك وبين فريق تطوير انستقرام الذهبي. باستخدامك للخدمة، فإنك تؤكد أنك قرأت وفهمت ووافقت على هذه الشروط بأكملها.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ar">ما هو انستقرام الذهبي؟</span>
+                        <span data-lang="en">What is Instagram Gold?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-lang="ar">
+                        <p>انستقرام الذهبي هو نسخة معدلة من تطبيق انستقرام الرسمي، ويحتوي على ميزات إضافية لا تتوفر في النسخة الأصلية. تشمل هذه الميزات خيارات الخصوصية المتقدمة، وتخصيص الواجهة، وإمكانية تنزيل المحتوى، والمزيد.</p>
+                    </div>
+                    <div class="faq-answer" data-lang="en">
+                        <p>Instagram Gold is a modified version of the official Instagram app, which includes additional features not available in the original version. These features include advanced privacy options, interface customization, the ability to download content, and more.</p>
+                    </div>
+                </div>
                 
-                <h3>2. الترخيص الممنوح</h3>
-                <p>نمنحك ترخيصًا محدودًا وغير حصري وقابلًا للإلغاء وغير قابل للتحويل لاستخدام تطبيقنا على جهازك المحمول، وذلك وفقًا لهذه الشروط. لا يُسمح لك بـ:</p>
-                <ul>
-                    <li>توزيع أو نسخ أو بيع التطبيق أو أي جزء منه.</li>
-                    <li>تعديل أو إنشاء أعمال مشتقة من التطبيق.</li>
-                    <li>فك تشفير أو محاولة استخراج كود المصدر الخاص بالتطبيق.</li>
-                </ul>
-
-                <h3>3. حقوق الملكية الفكرية</h3>
-                <p>جميع حقوق الملكية الفكرية المتعلقة بالموقع والتطبيق (بما في ذلك التصميم، المحتوى، العلامات التجارية، والشعارات) هي ملكية حصرية لفريق تطوير انستقرام الذهبي. لا يجوز استخدامها أو نسخها دون إذن كتابي مسبق.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ar">هل انستقرام الذهبي آمن للاستخدام؟</span>
+                        <span data-lang="en">Is Instagram Gold safe to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-lang="ar">
+                        <p>نحن نولي أهمية قصوى للأمان. يتم فحص كل إصدار من انستقرام الذهبي بعناية للتأكد من خلوه من الفيروسات والبرامج الضارة. ومع ذلك، ننصح دائمًا بتحميل التطبيق من مصدر موثوق مثل موقعنا الرسمي لتجنب النسخ المزيفة.</p>
+                    </div>
+                    <div class="faq-answer" data-lang="en">
+                        <p>We place the highest importance on security. Every version of Instagram Gold is carefully scanned to ensure it is free from viruses and malware. However, we always recommend downloading the app from a trusted source like our official website to avoid fake versions.</p>
+                    </div>
+                </div>
                 
-                <h3>4. حدود المسؤولية</h3>
-                <p>يتم توفير التطبيق "كما هو" و"حسب توفره" دون أي ضمانات من أي نوع. فريق تطوير انستقرام الذهبي لا يضمن أن التطبيق سيكون خاليًا من الأخطاء أو آمنًا، ولا يتحمل أي مسؤولية عن أي أضرار مباشرة أو غير مباشرة ناتجة عن استخدامك له.</p>
-
-                <h3>5. إنهاء الخدمة</h3>
-                <p>يحق لنا، وفقًا لتقديرنا الخاص، إنهاء أو تعليق وصولك إلى التطبيق أو الموقع في أي وقت، دون إشعار مسبق، لأي سبب، بما في ذلك انتهاكك لهذه الشروط.</p>
-
-                <h3>6. التغييرات على الشروط</h3>
-                <p>نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم نشر التغييرات على هذه الصفحة. استمرارك في استخدام الموقع أو التطبيق بعد نشر التغييرات يعتبر موافقة منك على الشروط المعدلة.</p>
-                
-                <h3>7. القانون الحاكم</h3>
-                <p>تخضع هذه الشروط وتُفسر وفقًا لقوانين الدولة اليمنية. أي نزاعات تنشأ عن هذه الشروط ستُعرض على المحاكم المختصة في اليمن.</p>
-
-                <div class="update-date">
-                    <p><strong>آخر تحديث:</strong> 8 أغسطس 2025</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ar">هل يمكنني استخدام انستقرام الذهبي بجانب انستقرام الرسمي؟</span>
+                        <span data-lang="en">Can I use Instagram Gold alongside the official Instagram?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-lang="ar">
+                        <p>نعم، يمكنك استخدام انستقرام الذهبي كنسخة ثانية من انستقرام على نفس الهاتف. لن يتعارض مع التطبيق الرسمي ويمكنك تشغيله بنفس الحساب أو بحساب مختلف.</p>
+                    </div>
+                    <div class="faq-answer" data-lang="en">
+                        <p>Yes, you can use Instagram Gold as a second version of Instagram on the same phone. It will not conflict with the official app, and you can run it with the same or a different account.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+        
+        <br>
+        
+        <div class="faq-section">
+            <h2 class="section-title" data-lang="ar">التنزيل والتثبيت</h2>
+            <h2 class="section-title" data-lang="en">Downloading & Installation</h2>
             
-            <div class="terms-content" data-lang="en">
-                <p>Welcome to the Instagram Gold website and app. By using this website or our app, you agree to be bound by these Terms and Conditions. If you do not agree with these terms, please do not use the website or app.</p>
-
-                <h3>1. Acceptance of Terms</h3>
-                <p>These terms constitute a binding contract between you and the Instagram Gold development team. By using the service, you affirm that you have read, understood, and agreed to these entire terms.</p>
+            <div class="faq-list">
                 
-                <h3>2. License Granted</h3>
-                <p>We grant you a limited, non-exclusive, revocable, and non-transferable license to use our app on your mobile device, in accordance with these terms. You are not permitted to:</p>
-                <ul>
-                    <li>Distribute, copy, or sell the app or any part of it.</li>
-                    <li>Modify or create derivative works from the app.</li>
-                    <li>Decompile or attempt to extract the source code of the app.</li>
-                </ul>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ar">كيف أقوم بتنزيل انستقرام الذهبي؟</span>
+                        <span data-lang="en">How do I download Instagram Gold?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-lang="ar">
+                        <p>اتبع الخطوات التالية لتنزيل التطبيق:</p>
+                        <ul>
+                            <li>انتقل إلى صفحة التنزيل الرئيسية على موقعنا.</li>
+                            <li>اضغط على زر التنزيل لـ "Instagram Gold".</li>
+                            <li>ستبدأ عملية التنزيل تلقائيًا بعد انتهاء العد التنازلي.</li>
+                        </ul>
+                    </div>
+                    <div class="faq-answer" data-lang="en">
+                        <p>Follow these steps to download the app:</p>
+                        <ul>
+                            <li>Go to the main download page on our website.</li>
+                            <li>Click the download button for "Instagram Gold".</li>
+                            <li>The download will start automatically after the countdown ends.</li>
+                        </ul>
+                    </div>
+                </div>
                 
-                <h3>3. Intellectual Property Rights</h3>
-                <p>All intellectual property rights related to the website and app (including design, content, trademarks, and logos) are the exclusive property of the Instagram Gold development team. They may not be used or copied without prior written permission.</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ar">لماذا يظهر تحذير "قد يكون الملف ضارًا" عند التنزيل؟</span>
+                        <span data-lang="en">Why does a "File might be harmful" warning appear when downloading?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-lang="ar">
+                        <p>تظهر هذه التحذيرات لأن ملفات APK المعدلة (مثل انستقرام الذهبي) لا تأتي من متجر Google Play. لكن لا تقلق، ملفاتنا آمنة تمامًا. يمكنك تخطي التحذير والمتابعة في التنزيل.</p>
+                    </div>
+                    <div class="faq-answer" data-lang="en">
+                        <p>These warnings appear because modified APK files (like Instagram Gold) do not come from the Google Play Store. But don't worry, our files are completely safe. You can bypass the warning and proceed with the download.</p>
+                    </div>
+                </div>
                 
-                <h3>4. Limitation of Liability</h3>
-                <p>The app is provided "as is" and "as available" without any warranties of any kind. The Instagram Gold development team does not guarantee that the app will be error-free or secure, and we are not liable for any direct or indirect damages resulting from your use of it.</p>
-                
-                <h3>5. Termination of Service</h3>
-                <p>We reserve the right, at our sole discretion, to terminate or suspend your access to the app or website at any time, without prior notice, for any reason, including your violation of these terms.</p>
-                
-                <h3>6. Changes to the Terms</h3>
-                <p>We reserve the right to modify these terms at any time. Changes will be posted on this page. Your continued use of the website or app after changes are posted constitutes your acceptance of the modified terms.</p>
-                
-                <h3>7. Governing Law</h3>
-                <p>These terms are governed by and construed in accordance with the laws of Yemen. Any disputes arising from these terms will be submitted to the competent courts in Yemen.</p>
-                
-                <div class="update-date">
-                    <p><strong>Last updated:</strong> August 8, 2025</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-lang="ar">كيف أقوم بتثبيت التطبيق بعد التنزيل؟</span>
+                        <span data-lang="en">How do I install the app after downloading?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-lang="ar">
+                        <p>بعد تنزيل ملف APK، اتبع الخطوات التالية:</p>
+                        <ol>
+                            <li>انتقل إلى مدير الملفات على هاتفك وافتح مجلد "التنزيلات" (Downloads).</li>
+                            <li>اضغط على ملف "Instagram_Gold.apk".</li>
+                            <li>إذا ظهرت رسالة تطلب السماح بتثبيت التطبيقات من "مصادر غير معروفة"، قم بتفعيل هذا الخيار من الإعدادات.</li>
+                            <li>اضغط على "تثبيت" وانتظر حتى يكتمل التثبيت.</li>
+                        </ol>
+                    </div>
+                    <div class="faq-answer" data-lang="en">
+                        <p>After downloading the APK file, follow these steps:</p>
+                        <ol>
+                            <li>Go to your phone's file manager and open the "Downloads" folder.</li>
+                            <li>Tap on the "Instagram_Gold.apk" file.</li>
+                            <li>If a message appears asking for permission to install apps from "Unknown Sources," enable this option in your settings.</li>
+                            <li>Tap "Install" and wait for the installation to complete.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
@@ -503,6 +574,33 @@
         document.addEventListener("DOMContentLoaded", () => {
             const userLang = navigator.language.startsWith("ar") ? "ar" : "en";
             setLanguage(userLang);
+            
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const arrowIcon = question.querySelector('i');
+                    
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question && otherQuestion.classList.contains('active')) {
+                            otherQuestion.classList.remove('active');
+                            otherQuestion.nextElementSibling.style.display = 'none';
+                            otherQuestion.nextElementSibling.style.maxHeight = null;
+                            otherQuestion.querySelector('i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    question.classList.toggle('active');
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        arrowIcon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.display = 'block';
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        arrowIcon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
         });
 
         function setLanguage(selectedLang) {

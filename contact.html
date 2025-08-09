@@ -2,27 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8" />
-    <title>الشروط والأحكام - انستقرام الذهبي</title>
+    <title>اتصل بنا - انستقرام الذهبي</title>
     <link rel="icon" href="https://instagold.download/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="robots" content="index,follow"/>
-    <meta name="description" content="الشروط والأحكام التي تحكم استخدام تطبيق انستقرام الذهبي والموقع. يرجى قراءتها بعناية."/>
-    <meta name="keywords" content="Instagram Gold, Instagram Plus, شروط وأحكام, terms and conditions, مسؤولية المستخدم"/>
+    <meta name="description" content="تواصل معنا للاستفسار عن انستقرام الذهبي أو لتقديم ملاحظاتك. يسعدنا سماع آرائكم واقتراحاتكم."/>
+    <meta name="keywords" content="Instagram Gold, Instagram Plus, اتصل بنا, contact us, دعم فني"/>
 
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="GoldFire"/>
     <meta property="og:locale" content="ar_AR"/>
-    <meta property="og:url" content="https://instagold.ogwhats.me/terms.html"/>
-    <meta property="og:title" content="الشروط والأحكام - انستقرام الذهبي"/>
-    <meta property="og:description" content="قراءة وفهم الشروط والأحكام التي تحكم استخدامك لتطبيقنا وموقعنا."/>
+    <meta property="og:url" content="https://instagold.ogwhats.me/contact.html"/>
+    <meta property="og:title" content="اتصل بنا - انستقرام الذهبي"/>
+    <meta property="og:description" content="تواصل معنا لجميع استفساراتك حول انستقرام الذهبي."/>
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@GoldFire"/>
-    <meta name="twitter:title" content="الشروط والأحكام - انستقرام الذهبي"/>
-    <meta property="twitter:description" content="قراءة وفهم الشروط والأحكام التي تحكم استخدامك لتطبيقنا وموقعنا."/>
+    <meta name="twitter:title" content="اتصل بنا - انستقرام الذهبي"/>
+    <meta property="twitter:description" content="تواصل معنا لجميع استفساراتك حول انستقرام الذهبي."/>
 
-    <meta itemprop="name" content="الشروط والأحكام - انستقرام الذهبي"/>
-    <meta itemprop="description" content="قراءة وفهم الشروط والأحكام التي تحكم استخدامك لتطبيقنا وموقعنا."/>
+    <meta itemprop="name" content="اتصل بنا - انستقرام الذهبي"/>
+    <meta itemprop="description" content="تواصل معنا لجميع استفساراتك حول انستقرام الذهبي."/>
 
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -152,7 +152,7 @@
             padding: 0 15px;
         }
 
-        .terms-section {
+        .contact-section {
             background: white;
             border-radius: 18px;
             box-shadow: var(--shadow);
@@ -186,54 +186,127 @@
             right: 50%;
             transform: translateX(50%);
         }
+        
+        .contact-desc {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
 
-        .terms-content h3 {
-            font-size: 20px;
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 600px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #f7e6f2;
+            padding: 20px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-icon {
+            font-size: 32px;
+            color: var(--plus-primary);
+            margin-bottom: 10px;
+        }
+        
+        .info-label {
+            font-size: 16px;
             font-weight: 700;
             color: var(--plus-dark);
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-
-        .terms-content p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .terms-content ol, .terms-content ul {
-            margin: 10px 0 20px 35px;
-            list-style-type: decimal;
-            font-size: 16px;
-            color: #555;
+            margin-bottom: 5px;
         }
         
-        [dir="rtl"] .terms-content ol, [dir="rtl"] .terms-content ul {
-            list-style-type: arabic-indic;
+        .info-value a {
+            font-size: 15px;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        [dir="ltr"] .terms-content ol, [dir="ltr"] .terms-content ul {
-             margin-left: 35px;
-             margin-right: 0;
+        .info-value a:hover {
+            color: var(--plus-primary);
         }
         
-        .terms-content ul {
-            list-style-type: disc;
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: right;
         }
-
-        .terms-content ol li, .terms-content ul li {
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
             margin-bottom: 8px;
-        }
-
-        .update-date {
-            text-align: center;
-            font-size: 14px;
-            color: #888;
-            margin-top: 30px;
+            color: var(--text-dark);
         }
         
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 15px;
+            background: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--plus-primary);
+            box-shadow: 0 0 0 2px rgba(225, 48, 108, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--plus-secondary), var(--plus-primary));
+            color: white;
+            padding: 14px 25px;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 15px;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
         .footer {
             background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
             color: #aaa;
@@ -335,13 +408,7 @@
             .section-title {
                 font-size: 22px;
             }
-            .terms-content h3 {
-                font-size: 18px;
-            }
-            .terms-content p {
-                font-size: 14px;
-            }
-            .terms-content ol, .terms-content ul {
+            .contact-desc {
                 font-size: 14px;
             }
             .footer-logo {
@@ -369,85 +436,69 @@
     
     <header class="header">
         <div class="header-content">
-            <h1 data-lang="ar">الشروط والأحكام</h1>
-            <h1 data-lang="en">Terms & Conditions</h1>
-            <p class="subtitle" data-lang="ar">الرجاء قراءة هذه الشروط بعناية قبل استخدام موقعنا وتطبيقنا</p>
-            <p class="subtitle" data-lang="en">Please read these terms carefully before using our website and app</p>
+            <h1 data-lang="ar">اتصل بنا</h1>
+            <h1 data-lang="en">Contact Us</h1>
+            <p class="subtitle" data-lang="ar">يسعدنا سماع آرائكم واقتراحاتكم في أي وقت</p>
+            <p class="subtitle" data-lang="en">We'd love to hear your feedback and suggestions anytime</p>
         </div>
     </header>
     
     <div class="main-content">
-        <div class="terms-section">
-            <h2 class="section-title" data-lang="ar">مقدمة</h2>
-            <h2 class="section-title" data-lang="en">Introduction</h2>
+        <div class="contact-section">
+            <h2 class="section-title" data-lang="ar">تواصل معنا</h2>
+            <h2 class="section-title" data-lang="en">Get in Touch</h2>
             
-            <div class="terms-content" data-lang="ar">
-                <p>مرحباً بك في موقع وتطبيق انستقرام الذهبي. باستخدامك لهذا الموقع أو تطبيقنا، فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام الموقع أو التطبيق.</p>
-                
-                <h3>1. قبول الشروط</h3>
-                <p>تُعتبر هذه الشروط عقدًا ملزمًا بينك وبين فريق تطوير انستقرام الذهبي. باستخدامك للخدمة، فإنك تؤكد أنك قرأت وفهمت ووافقت على هذه الشروط بأكملها.</p>
-                
-                <h3>2. الترخيص الممنوح</h3>
-                <p>نمنحك ترخيصًا محدودًا وغير حصري وقابلًا للإلغاء وغير قابل للتحويل لاستخدام تطبيقنا على جهازك المحمول، وذلك وفقًا لهذه الشروط. لا يُسمح لك بـ:</p>
-                <ul>
-                    <li>توزيع أو نسخ أو بيع التطبيق أو أي جزء منه.</li>
-                    <li>تعديل أو إنشاء أعمال مشتقة من التطبيق.</li>
-                    <li>فك تشفير أو محاولة استخراج كود المصدر الخاص بالتطبيق.</li>
-                </ul>
+            <p class="contact-desc" data-lang="ar">
+                إذا كان لديك أي استفسار أو واجهت مشكلة، لا تتردد في الاتصال بنا عبر الطرق التالية:
+            </p>
+            <p class="contact-desc" data-lang="en">
+                If you have any inquiries or face an issue, please feel free to contact us through the following methods:
+            </p>
 
-                <h3>3. حقوق الملكية الفكرية</h3>
-                <p>جميع حقوق الملكية الفكرية المتعلقة بالموقع والتطبيق (بما في ذلك التصميم، المحتوى، العلامات التجارية، والشعارات) هي ملكية حصرية لفريق تطوير انستقرام الذهبي. لا يجوز استخدامها أو نسخها دون إذن كتابي مسبق.</p>
-                
-                <h3>4. حدود المسؤولية</h3>
-                <p>يتم توفير التطبيق "كما هو" و"حسب توفره" دون أي ضمانات من أي نوع. فريق تطوير انستقرام الذهبي لا يضمن أن التطبيق سيكون خاليًا من الأخطاء أو آمنًا، ولا يتحمل أي مسؤولية عن أي أضرار مباشرة أو غير مباشرة ناتجة عن استخدامك له.</p>
-
-                <h3>5. إنهاء الخدمة</h3>
-                <p>يحق لنا، وفقًا لتقديرنا الخاص، إنهاء أو تعليق وصولك إلى التطبيق أو الموقع في أي وقت، دون إشعار مسبق، لأي سبب، بما في ذلك انتهاكك لهذه الشروط.</p>
-
-                <h3>6. التغييرات على الشروط</h3>
-                <p>نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم نشر التغييرات على هذه الصفحة. استمرارك في استخدام الموقع أو التطبيق بعد نشر التغييرات يعتبر موافقة منك على الشروط المعدلة.</p>
-                
-                <h3>7. القانون الحاكم</h3>
-                <p>تخضع هذه الشروط وتُفسر وفقًا لقوانين الدولة اليمنية. أي نزاعات تنشأ عن هذه الشروط ستُعرض على المحاكم المختصة في اليمن.</p>
-
-                <div class="update-date">
-                    <p><strong>آخر تحديث:</strong> 8 أغسطس 2025</p>
+            <div class="contact-info-grid">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-label" data-lang="ar">البريد الإلكتروني</div>
+                    <div class="info-label" data-lang="en">Email Address</div>
+                    <div class="info-value"><a href="mailto:goldhelper.report@gmail.com">goldhelper.report@gmail.com</a></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="info-label" data-lang="ar">قناة التليجرام</div>
+                    <div class="info-label" data-lang="en">Telegram Channel</div>
+                    <div class="info-value"><a href="https://t.me/AssemBlogger" target="_blank">@AssemBlogger</a></div>
                 </div>
             </div>
-            
-            <div class="terms-content" data-lang="en">
-                <p>Welcome to the Instagram Gold website and app. By using this website or our app, you agree to be bound by these Terms and Conditions. If you do not agree with these terms, please do not use the website or app.</p>
 
-                <h3>1. Acceptance of Terms</h3>
-                <p>These terms constitute a binding contract between you and the Instagram Gold development team. By using the service, you affirm that you have read, understood, and agreed to these entire terms.</p>
-                
-                <h3>2. License Granted</h3>
-                <p>We grant you a limited, non-exclusive, revocable, and non-transferable license to use our app on your mobile device, in accordance with these terms. You are not permitted to:</p>
-                <ul>
-                    <li>Distribute, copy, or sell the app or any part of it.</li>
-                    <li>Modify or create derivative works from the app.</li>
-                    <li>Decompile or attempt to extract the source code of the app.</li>
-                </ul>
-                
-                <h3>3. Intellectual Property Rights</h3>
-                <p>All intellectual property rights related to the website and app (including design, content, trademarks, and logos) are the exclusive property of the Instagram Gold development team. They may not be used or copied without prior written permission.</p>
-                
-                <h3>4. Limitation of Liability</h3>
-                <p>The app is provided "as is" and "as available" without any warranties of any kind. The Instagram Gold development team does not guarantee that the app will be error-free or secure, and we are not liable for any direct or indirect damages resulting from your use of it.</p>
-                
-                <h3>5. Termination of Service</h3>
-                <p>We reserve the right, at our sole discretion, to terminate or suspend your access to the app or website at any time, without prior notice, for any reason, including your violation of these terms.</p>
-                
-                <h3>6. Changes to the Terms</h3>
-                <p>We reserve the right to modify these terms at any time. Changes will be posted on this page. Your continued use of the website or app after changes are posted constitutes your acceptance of the modified terms.</p>
-                
-                <h3>7. Governing Law</h3>
-                <p>These terms are governed by and construed in accordance with the laws of Yemen. Any disputes arising from these terms will be submitted to the competent courts in Yemen.</p>
-                
-                <div class="update-date">
-                    <p><strong>Last updated:</strong> August 8, 2025</p>
+            <p class="contact-desc" data-lang="ar">
+                أو املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن.
+            </p>
+            <p class="contact-desc" data-lang="en">
+                Or fill out the form below, and we'll get back to you as soon as possible.
+            </p>
+
+            <form class="contact-form" action="https://formspree.io/f/youremailaddress" method="POST">
+                <div class="form-group">
+                    <label for="name" data-lang="ar">الاسم</label>
+                    <label for="name" data-lang="en">Your Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="email" data-lang="ar">البريد الإلكتروني</label>
+                    <label for="email" data-lang="en">Your Email</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-lang="ar">رسالتك</label>
+                    <label for="message" data-lang="en">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <span data-lang="ar">إرسال الرسالة</span>
+                    <span data-lang="en">Send Message</span>
+                </button>
+            </form>
         </div>
     </div>
     
