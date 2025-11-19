@@ -2,30 +2,30 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>InstaGold_v10.40 - النسخة الذهبية من إنستقرام</title>
+  <title>InstaGold_v10.40 - النسخة الذهبي من إنستقرام</title>
   
-  <!-- Favicon -->
+ <!-- Favicon -->
   <link rel="icon" href="https://instagold.download/favicon.ico" type="image/x-icon">
 
   <!-- Meta tags الأساسية -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="robots" content="index,follow"/>
   <meta name="description" content="InstaGold_v10.40 هو نسخة محسنة من تطبيق إنستقرام مع ميزات فريدة مثل تنزيل الوسائط وإخفاء الحالة والمزيد."/>
-  <meta name="keywords" content="Instagram Plus, InstaGold, نسخة إنستقرام معدلة, تنزيل إنستقرام الذهبي"/>
+  <meta name="keywords" content="Instagram Gold, InstaGold, نسخة إنستقرام معدلة, تنزيل إنستقرام الذهبي"/>
 
   <!-- Open Graph (Facebook, WhatsApp, Telegram) -->
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="GoldFire"/>
   <meta property="og:locale" content="ar_AR"/>
   <meta property="og:url" content="https://instagold.ogwhats.me"/>
-  <meta property="og:title" content="InstaGold_v10.40 - النسخة الذهبية من إنستقرام"/>
+  <meta property="og:title" content="InstaGold_v10.40 - النسخة الذهبي من إنستقرام"/>
   <meta property="og:description" content="قم بتنزيل InstaGold_v10.40 - نسخة معدلة من إنستقرام مع ميزات فريدة."/>
   <meta property="og:image" content="app_icon2.png"/>
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:site" content="@GoldFire"/>
-  <meta name="twitter:title" content="InstaGold_v10.40 - النسخة الذهبية من إنستقرام"/>
+  <meta name="twitter:title" content="InstaGold_v10.40 - النسخة الذهبي من إنستقرام"/>
   <meta name="twitter:description" content="قم بتنزيل InstaGold_v10.40 - نسخة معدلة من إنستقرام مع ميزات فريدة."/>
   <meta name="twitter:image" content="app_icon2.png"/>
   <meta name="twitter:url" content="https://instagold.ogwhats.me"/>
@@ -40,8 +40,6 @@
   
   <!-- أيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
- 
   
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M76DRG3CWG"></script>
@@ -416,21 +414,7 @@
       margin-right: 8px;
     }
     
-    /* العد التنازلي */
-    .countdown-box {
-      background: linear-gradient(135deg, #ffd700, var(--gold-secondary));
-      padding: 16px;
-      margin-top: 18px;
-      border-radius: 14px;
-      font-size: 17px;
-      font-weight: 700;
-      text-align: center;
-      color: #222;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      display: none;
-    }
-    
-    /* زر التنزيل النهائي */
+    /* زر الانتقال لصفحة التحميل */
     .download-btn {
       display: flex;
       align-items: center;
@@ -799,23 +783,20 @@
         </div>
         
         <div class="download-box">
-          <a href="javascript:void(0);" onclick="startCountdown()" id="fileInfoBox" class="file-box">
+          <a href="download.html" class="file-box">
             <img src="app_icon.png" alt="icon">
             <div class="text">
               <div class="title">InstaGold_v10.40</div>
-              <div class="size" data-lang="ar">اضغط للتحميل</div>
-              <div class="size" data-lang="en">Click to download</div>
+              <div class="size" data-lang="ar">اضغط للانتقال لصفحة التحميل</div>
+              <div class="size" data-lang="en">Click to go to download page</div>
             </div>
-            <i class="fas fa-arrow-down download-icon"></i>
+            <i class="fas fa-arrow-right download-icon"></i>
           </a>
 
-          <div id="countdownBox" class="countdown-box"></div>
-
-          <a href="https://www.mediafire.com/file/ej658601wftcrdd/InstaGold_v10.40.apk/file" 
-             id="finalDownloadBox" class="download-btn" style="display: none;">
+          <a href="download.html" class="download-btn">
             <i class="fas fa-download"></i>
-            <span data-lang="ar">تنزيل الآن</span>
-            <span data-lang="en">Download Now</span>
+            <span data-lang="ar">انتقل لصفحة التحميل</span>
+            <span data-lang="en">Go to Download Page</span>
           </a>
         </div>
       </div>
@@ -972,32 +953,6 @@
       });
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.lang = lang;
-    }
-
-    function startCountdown() {
-      document.getElementById("fileInfoBox").style.display = "none";
-      var counter = 6;
-      var countdownBox = document.getElementById("countdownBox");
-      var finalBtn = document.getElementById("finalDownloadBox");
-
-      countdownBox.style.display = "block";
-      countdownBox.innerHTML = lang === "ar"
-        ? `<i class="fas fa-spinner fa-spin"></i> جاري التحضير للتنزيل... ${counter}`
-        : `<i class="fas fa-spinner fa-spin"></i> Preparing download... ${counter}`;
-
-      var interval = setInterval(function () {
-        counter--;
-        countdownBox.innerHTML = lang === "ar"
-          ? `<i class="fas fa-spinner fa-spin"></i> جاري التحضير للتنزيل... ${counter}`
-          : `<i class="fas fa-spinner fa-spin"></i> Preparing download... ${counter}`;
-
-        if (counter === 0) {
-          clearInterval(interval);
-          countdownBox.style.display = "none";
-          finalBtn.style.display = "flex";
-          finalBtn.classList.add("animate__animated", "animate__pulse");
-        }
-      }, 1000);
     }
   </script>
 </body>
