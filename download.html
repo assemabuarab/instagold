@@ -595,6 +595,114 @@
         font-size: 14px;
       }
     }
+	
+	/* === إعلانات أدسنس - نسخة مبسطة === */
+
+/* إعلان الرأس */
+.ads-header {
+  margin: 20px auto 30px;
+  max-width: 728px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.ads-label {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* إعلان داخل المحتوى */
+.ads-inline {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 15px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* إعلان الفوتر */
+.ads-footer {
+  margin: 30px auto 0;
+  max-width: 728px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* إعلان موبايل */
+.ads-mobile {
+  display: none;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* حاوية الإعلان */
+.ad-container {
+  display: block;
+  text-align: center;
+  min-height: 90px;
+  background: rgba(40, 40, 40, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+  .ads-header {
+    max-width: 320px;
+  }
+  
+  .ads-footer {
+    max-width: 320px;
+  }
+  
+  .ads-mobile {
+    display: block;
+    max-width: 320px;
+  }
+  
+  .ads-inline {
+    max-width: 320px;
+  }
+  
+  /* طريقة بسيطة لمركزة الإعلانات */
+  .ad-container {
+    text-align: center;
+  }
+  
+  .ad-container ins {
+    display: inline-block !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ads-header,
+  .ads-footer,
+  .ads-inline {
+    max-width: 300px;
+  }
+  
+  .ads-mobile {
+    max-width: 300px;
+  }
+}
+
+/* الحل الأكيد لمركزة إعلانات أدسنس */
+.ad-container {
+  text-align: center;
+}
+
+.ad-container ins {
+  display: inline-block !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
   </style>
 </head>
 
@@ -637,6 +745,30 @@
       <div class="version-badge">v10.50</div>
     </div>
   </header>
+  
+  
+  <!-- إعلان الرأس -->
+  <div class="ads-header">
+    <span class="ads-label" data-lang="ar">إعلان</span>
+    <span class="ads-label" data-lang="en">Advertisement</span>
+    <div class="ad-container">
+      <!-- إعلان أدسنس 728x90 -->
+      <script type="text/javascript">
+		  atOptions = {
+			'key' : '40c08b962e3429e80017ff69620f6e2a',
+			'format' : 'iframe',
+			'height' : 90,
+			'width' : 728,
+			'params' : {}
+		  };
+		</script>
+		<script
+		  type="text/javascript"
+		  src="https://www.highperformanceformat.com/40c08b962e3429e80017ff69620f6e2a/invoke.js"
+		></script>
+    </div>
+  </div>
+  
 
   <!-- المحتوى الرئيسي -->
   <div class="main-content">
@@ -678,6 +810,30 @@
           <div class="meta-label" data-lang="en">Virus Free</div>
         </div>
       </div>
+	  
+	  
+	  <!-- إعلان داخل المحتوى -->
+        <div class="ads-inline">
+          <span class="ads-label" data-lang="ar">إعلان</span>
+          <span class="ads-label" data-lang="en">Advertisement</span>
+          <div class="ad-container">
+            <!-- إعلان أدسنس 300x250 -->
+            <script type="text/javascript">
+			  atOptions = {
+				'key' : '0cb60e12c11a9dd91dd63495f4853ce5',
+				'format' : 'iframe',
+				'height' : 250,
+				'width' : 300,
+				'params' : {}
+			  };
+			</script>
+			<script
+			  type="text/javascript"
+			  src="https://www.highperformanceformat.com/0cb60e12c11a9dd91dd63495f4853ce5/invoke.js"
+			></script>
+          </div>
+        </div>
+	  
       
       <div id="countdownBox" class="countdown-box">
         <i class="fas fa-spinner fa-spin"></i>
@@ -692,11 +848,59 @@
         <span data-lang="en">Download Now</span>
       </a>
     </div>
+	
+	
+	<!-- إعلان موبايل -->
+        <div class="ads-mobile">
+          <span class="ads-label" data-lang="ar">إعلان</span>
+          <span class="ads-label" data-lang="en">Advertisement</span>
+          <div class="ad-container">
+            <!-- إعلان أدسنس 320x50 للجوال -->
+            <script type="text/javascript">
+			  atOptions = {
+				'key' : '93e06af0e50eb94c99c5f1def5aee02e',
+				'format' : 'iframe',
+				'height' : 50,
+				'width' : 320,
+				'params' : {}
+			  };
+			</script>
+			<script
+			  type="text/javascript"
+			  src="https://www.highperformanceformat.com/93e06af0e50eb94c99c5f1def5aee02e/invoke.js"
+			></script>
+          </div>
+        </div>
+      </div>
     
     <!-- تعليمات التثبيت -->
     <div class="instructions-card">
       <h2 class="section-title" data-lang="ar">تعليمات التثبيت</h2>
       <h2 class="section-title" data-lang="en">Installation Instructions</h2>
+	  
+	  
+	  <!-- إعلان الشريط الجانبي -->
+        <div class="ads-sidebar">
+          <span class="ads-label" data-lang="ar">إعلان</span>
+          <span class="ads-label" data-lang="en">Advertisement</span>
+          <div class="ad-container">
+            <!-- إعلان أدسنس 300x600 -->
+            <script type="text/javascript">
+			  atOptions = {
+				'key' : 'fb1912b07b33aaeab94f33aa700c3c0c',
+				'format' : 'iframe',
+				'height' : 60,
+				'width' : 468,
+				'params' : {}
+			  };
+			</script>
+			<script
+			  type="text/javascript"
+			  src="https://www.highperformanceformat.com/fb1912b07b33aaeab94f33aa700c3c0c/invoke.js"
+			></script>
+          </div>
+        </div>
+		
       
       <ol class="steps-list">
         <li class="step-item">
@@ -741,6 +945,29 @@
           </div>
         </li>
       </ol>
+    </div>
+  </div>
+  
+  
+  <!-- إعلان الفوتر -->
+  <div class="ads-footer">
+    <span class="ads-label" data-lang="ar">إعلان</span>
+    <span class="ads-label" data-lang="en">Advertisement</span>
+    <div class="ad-container">
+      <!-- إعلان أدسنس 728x90 -->
+      <script type="text/javascript">
+		  atOptions = {
+			'key' : '40c08b962e3429e80017ff69620f6e2a',
+			'format' : 'iframe',
+			'height' : 90,
+			'width' : 728,
+			'params' : {}
+		  };
+		</script>
+		<script
+		  type="text/javascript"
+		  src="https://www.highperformanceformat.com/40c08b962e3429e80017ff69620f6e2a/invoke.js"
+		></script>
     </div>
   </div>
 
@@ -817,21 +1044,45 @@
       const userLang = navigator.language.startsWith("ar") ? "ar" : "en";
       setLanguage(userLang);
       
-      // بدء العد التنازلي تلقائياً
-      startCountdown();
+      // تحميل إعلانات أدسنس بعد تحميل الصفحة
+      setTimeout(() => {
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } catch (e) {
+          console.log('Error loading ads:', e);
+        }
+      }, 2000);
+      
+      // إصلاح محاذاة الإعلانات بعد التحميل
+      setTimeout(fixAdAlignment, 2500);
     });
 
     let lang = 'ar';
     function setLanguage(selectedLang) {
       lang = selectedLang;
+      
+      // تحديث كل العناصر بلغة واحدة
       document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+        el.style.display = el.dataset.lang === lang ? 'inline-block' : 'none';
       });
+      
+      // تحديث direction و lang للصفحة
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.lang = lang;
+      
+      // تحديث تسميات الإعلانات
+      updateAdLabels();
+    }
+    
+    // دالة لتحديث تسميات الإعلانات
+    function updateAdLabels() {
+      document.querySelectorAll('.ads-label').forEach(label => {
+        label.style.display = label.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
     }
 
     function startCountdown() {
+      document.getElementById("fileInfoBox").style.display = "none";
       var counter = 6;
       var countdownBox = document.getElementById("countdownBox");
       var finalBtn = document.getElementById("finalDownloadBox");
@@ -851,10 +1102,101 @@
           clearInterval(interval);
           countdownBox.style.display = "none";
           finalBtn.style.display = "flex";
-          finalBtn.classList.add("animate__animated", "animate__pulse");
         }
       }, 1000);
     }
+    
+    // دالة لإصلاح محاذاة إعلانات أدسنس
+    function fixAdAlignment() {
+      const isMobile = window.innerWidth <= 768;
+      
+      // إصلاح محاذاة جميع الإعلانات
+      document.querySelectorAll('.ad-container ins').forEach(ad => {
+        // تطبيق الأنماط الأساسية
+        ad.style.margin = '0 auto';
+        ad.style.display = 'block';
+        ad.style.textAlign = 'center';
+        
+        // تعديل الحجم للجوال
+        if (isMobile) {
+          const container = ad.closest('.ad-container');
+          if (container) {
+            // تحديد حجم الإعلان بناءً على مكانه
+            if (container.closest('.ads-header') || container.closest('.ads-footer')) {
+              ad.style.width = '320px';
+              ad.style.height = '50px';
+            } else if (container.closest('.ads-inline')) {
+              ad.style.width = '300px';
+              ad.style.height = '250px';
+            } else if (container.closest('.ads-mobile')) {
+              ad.style.width = '320px';
+              ad.style.height = '50px';
+            }
+          }
+        }
+      });
+      
+      // التحكم في عرض إعلان الجوال
+      const mobileAds = document.querySelector('.ads-mobile');
+      if (mobileAds) {
+        mobileAds.style.display = isMobile ? 'block' : 'none';
+      }
+      
+      // إضافة padding إضافي للإعلانات على الجوال لتحسين المحاذاة
+      if (isMobile) {
+        document.querySelectorAll('.ads-inline, .ads-header, .ads-footer').forEach(adContainer => {
+          adContainer.style.padding = '0 10px';
+        });
+      }
+    }
+    
+    // دالة لاكتشاف حجم الشاشة
+    function detectScreenSize() {
+      fixAdAlignment(); // نستدعي نفس الدالة
+    }
+    
+    // تشغيل الدوال عند الأحداث
+    window.addEventListener('load', () => {
+      // تأخير بسيط لضمان تحميل الإعلانات
+      setTimeout(fixAdAlignment, 1000);
+    });
+    
+    window.addEventListener('resize', detectScreenSize);
+    
+    // تشغيل إضافي بعد 3 ثوان للتأكد
+    setTimeout(fixAdAlignment, 3000);
+    
+    // حل خاص لمشكلة محاذاة أدسنس النهائي
+    function finalAdFix() {
+      // إعادة تطبيق الأنماط بعد فترة للتأكد
+      document.querySelectorAll('.ad-container').forEach(container => {
+        container.style.textAlign = 'center';
+        
+        const ad = container.querySelector('ins');
+        if (ad) {
+          ad.style.margin = '0 auto';
+          ad.style.display = 'block';
+          
+          // إذا كان الإعلان محملاً بالفعل
+          if (ad.offsetHeight > 0) {
+            // مركزة الإعلان داخل الحاوية
+            const containerWidth = container.offsetWidth;
+            const adWidth = ad.offsetWidth;
+            
+            if (adWidth > 0) {
+              const marginLeft = (containerWidth - adWidth) / 2;
+              ad.style.marginLeft = `${marginLeft}px`;
+              ad.style.marginRight = `${marginLeft}px`;
+            }
+          }
+        }
+      });
+    }
+    
+    // تشغيل الحل النهائي عدة مرات للتأكد
+    [4000, 6000, 10000].forEach(time => {
+      setTimeout(finalAdFix, time);
+    });
   </script>
 </body>
 </html>
