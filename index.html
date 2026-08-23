@@ -943,13 +943,11 @@
           <div id="countdownBox" class="countdown-box"></div>
 
           <div id="finalDownloadBox" style="display: none;">
-            <a href="javascript:void(0);"
-               id="encryptedDownloadBtn"
-               class="download-btn"
-               onclick="executeEncryptedDownload(event)">
+            <a href="https://instagold-download.ahmedalswaidi30.workers.dev/go" 
+               class="download-btn">
               <i class="fas fa-download"></i>
-              <span data-lang="ar" id="downloadTextAr">تنزيل الآن</span>
-              <span data-lang="en" id="downloadTextEn">Download Now</span>
+              <span data-lang="ar">تنزيل الآن</span>
+              <span data-lang="en">Download Now</span>
             </a>
             
             <!-- زر تابع المطور على تلجرام -->
@@ -1151,84 +1149,6 @@
       document.documentElement.lang = lang;
     }
 
-    // رابط التحميل الحقيقي لا يوجد داخل الصفحة نهائياً.
-    // يتم توليد رابط مؤقت مشفّر من dl.php بعد انتهاء العد التنازلي.
-    let generatedMaskedUrl = '';
-    let preparingEncryptedLink = false;
-
-    function setDownloadButtonState(state) {
-      const btn = document.getElementById('encryptedDownloadBtn');
-      const ar = document.getElementById('downloadTextAr');
-      const en = document.getElementById('downloadTextEn');
-      if (!btn || !ar || !en) return;
-
-      if (state === 'loading') {
-        btn.style.pointerEvents = 'none';
-        btn.style.opacity = '0.72';
-        ar.textContent = 'جاري تشفير رابط التحميل...';
-        en.textContent = 'Encrypting download link...';
-      } else if (state === 'ready') {
-        btn.style.pointerEvents = 'auto';
-        btn.style.opacity = '1';
-        ar.textContent = 'تنزيل الآن';
-        en.textContent = 'Download Now';
-      } else if (state === 'error') {
-        btn.style.pointerEvents = 'auto';
-        btn.style.opacity = '1';
-        ar.textContent = 'إعادة محاولة تجهيز الرابط';
-        en.textContent = 'Retry preparing link';
-      }
-    }
-
-    async function prepareEncryptedDownload() {
-      if (generatedMaskedUrl || preparingEncryptedLink) return generatedMaskedUrl;
-
-      preparingEncryptedLink = true;
-      setDownloadButtonState('loading');
-
-      try {
-        const response = await fetch('dl.php?action=encrypt&id=instagold', {
-          method: 'GET',
-          cache: 'no-store',
-          credentials: 'same-origin'
-        });
-        const data = await response.json();
-
-        if (!response.ok || !data.success || !data.maskedUrl) {
-          throw new Error((data && data.error) ? data.error : 'Unable to create encrypted link');
-        }
-
-        generatedMaskedUrl = data.maskedUrl;
-        setDownloadButtonState('ready');
-        return generatedMaskedUrl;
-      } catch (error) {
-        console.error('Encrypted download error:', error);
-        generatedMaskedUrl = '';
-        setDownloadButtonState('error');
-        return '';
-      } finally {
-        preparingEncryptedLink = false;
-      }
-    }
-
-    async function executeEncryptedDownload(event) {
-      if (event) event.preventDefault();
-
-      let url = generatedMaskedUrl;
-      if (!url) {
-        url = await prepareEncryptedDownload();
-      }
-      if (!url) return;
-
-      // نفس فكرة المشروع المرجعي: بدء التنزيل من الرابط المقنّع
-      // بدون وضع رابط التخزين الحقيقي في href أو JavaScript.
-      const frame = document.createElement('iframe');
-      frame.style.display = 'none';
-      frame.src = url;
-      document.body.appendChild(frame);
-      setTimeout(() => frame.remove(), 15000);
-    }
-
     function startCountdown() {
       document.getElementById("fileInfoBox").style.display = "none";
       var counter = 6;
@@ -1250,9 +1170,6 @@
           clearInterval(interval);
           countdownBox.style.display = "none";
           finalBtn.style.display = "block";
-
-          // تجهيز رابط التحميل المشفّر فور انتهاء العد التنازلي
-          prepareEncryptedDownload();
           
           // تحريك الصفحة لأسفل لعرض الأزرار
           setTimeout(() => {
